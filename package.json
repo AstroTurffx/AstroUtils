@@ -1,0 +1,11 @@
+{
+  "name": "astroturffx.astroutils",
+  "version": "1.0.0",
+  "description": "A bunch of helpful utilities made to help you code and speed up development.",
+  "displayName": "Astro Utils",
+  "author": {
+    "name": "AstroTurffx",
+    "email": "john.doe@example.com",
+    "url": "https://github.com/astroturffx"
+  }
+}
