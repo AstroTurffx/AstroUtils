@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AstroUtils
+namespace AstroTurffx.AstroUtils
 {
     public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {

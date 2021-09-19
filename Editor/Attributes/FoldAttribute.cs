@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AstroUtils.Editor
+namespace AstroTurffx.AstroUtils.Editor
 {
     public class FoldAttribute : PropertyAttribute
     {

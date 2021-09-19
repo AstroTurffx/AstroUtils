@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace AstroUtils.Editor
+namespace AstroTurffx.AstroUtils.Editor
 {
     
     /// <summary>Makes the property uneditable in the inspector.</summary>

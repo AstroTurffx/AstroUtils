@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-namespace AstroUtils.SLSystem
+namespace AstroTurffx.AstroUtils.SLSystem
 {
     public static class SLManager
     {

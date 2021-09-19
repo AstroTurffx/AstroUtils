@@ -7,7 +7,7 @@ using UnityEngine;
 using Object = UnityEngine.Object;
 
 
-namespace AstroUtils.Editor
+namespace AstroTurffx.AstroUtils.Editor
 {
 	[CustomEditor(typeof(Object), true, isFallback = true)]
 	[CanEditMultipleObjects]
