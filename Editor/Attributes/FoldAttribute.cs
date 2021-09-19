@@ -5,14 +5,14 @@ namespace AstroTurffx.AstroUtils.Editor
     public class FoldAttribute : PropertyAttribute
     {
         public string name;
-        public bool foldEverything;
+        public bool continuous;
 
-        /// <summary>Adds the property to the specified foldout group.</summary>
+        /// <summary>Adds the property to a specified foldout group.</summary>
         /// <param name="name">Name of the foldout group.</param>
-        /// <param name="foldEverything">Toggle to put all properties to the specified group.</param>
-        public FoldAttribute(string name, bool foldEverything = false)
+        /// <param name="continuous">Toggle to fold variables below it.</param>
+        public FoldAttribute(string name, bool continuous = false)
         {
-            this.foldEverything = foldEverything;
+            this.continuous = continuous;
             this.name = name;
         }
     }

@@ -152,7 +152,7 @@ namespace AstroTurffx.AstroUtils.Editor
 					CacheFoldProp c;
 					if (fold == null)
 					{
-						if (prevFold != null && prevFold.foldEverything)
+						if (prevFold != null && prevFold.continuous)
 						{
 							if (!cacheFolds.TryGetValue(prevFold.name, out c))
 							{

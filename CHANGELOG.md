@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Base package structure
 - A changelog
-- [GitHub repo](https://github.com/astroturffx)
+- [GitHub repo](https://github.com/AstroTurffx/AstroUtils)
+- Added [documentaion](https://github.com/AstroTurffx/AstroUtils/wiki)
 - Added the `ReadOnly` attribute 
 - Added the `Fold` attribute
 - Added a custom inspector for the `Fold` attribute
