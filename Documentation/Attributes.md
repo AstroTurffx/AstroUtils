@@ -6,7 +6,7 @@ Makes the property uneditable in the inspector.
 public float notReadOnly;
 [ReadOnly] public float readOnly;
 ```
-![Read Only Attribute Example](https://github.com/AstroTurffx/AstroUtils/tree/main/Documentation/ExampleImages/ReadOnlyAttribute.png?raw=true)
+![Read Only Attribute Example](https://raw.githubusercontent.com/AstroTurffx/AstroUtils/main/Documentation/ExampleImages/ReadOnlyAttribute.png)
 
 
 # Fold Attribute
@@ -19,7 +19,8 @@ Name of the foldout group.
 
 #### `continuous`
 Toggle to fold variables below it.
-##### Default: `false`
+
+**Default: `false`**
 
 ### Example
 ```c#
@@ -31,4 +32,4 @@ public float testValue2;
 public float testValue3;
 public float testValue4;
 ```
-![Fold Attribute Example](https://github.com/AstroTurffx/AstroUtils/tree/main/Documentation/ExampleImages/FoldAttribute.png?raw=true)
+![Fold Attribute Example](https://raw.githubusercontent.com/AstroTurffx/AstroUtils/main/Documentation/ExampleImages/FoldAttribute.png)
