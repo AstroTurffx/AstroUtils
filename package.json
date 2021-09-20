@@ -7,5 +7,7 @@
     "name": "AstroTurffx",
     "email": "astroturffx@squaredgames.dev",
     "url": "https://github.com/astroturffx"
-  }
+  },
+  "changelogUrl": "https://github.com/AstroTurffx/AstroUtils/blob/main/CHANGELOG.md",
+  "documentationUrl": "https://github.com/AstroTurffx/AstroUtils/wiki"
 }
