@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added a Basic Player Controller system
 - Added Scene Loading capabilities
 - Added Loading Screens 
 - Added a menu item to create a basic player controller
