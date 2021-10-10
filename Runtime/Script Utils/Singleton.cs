@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AstroTurffx.AstroUtils
+namespace AstroTurffx.AstroUtils.Utils
 {
     public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
@@ -9,10 +9,14 @@ namespace AstroTurffx.AstroUtils
         public virtual void Awake()
         {
             T t = GetComponent<T>();
-            if (Instance == null) Instance = t;
+            if (Instance == null)
+            {
+                Instance = t;
+                DontDestroyOnLoad(gameObject);
+            }
             else if (Instance != t)
             {
-                Debug.LogError($"There are mutliple {typeof(T).Name} in the scene!");
+                Debug.LogWarning($"There are multiple {typeof(T).Name} in the scene!");
                 Destroy(gameObject);
             }
         }

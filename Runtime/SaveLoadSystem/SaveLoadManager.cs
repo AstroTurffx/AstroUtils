@@ -4,9 +4,9 @@ using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-namespace AstroTurffx.AstroUtils.SLSystem
+namespace AstroTurffx.AstroUtils.SaveLoadSystem
 {
-    public static class SLManager
+    public static class SaveLoadManager
     {
         public static bool SaveFile<T>(string fileName, T data)
         {
@@ -22,6 +22,7 @@ namespace AstroTurffx.AstroUtils.SLSystem
             }
             catch (Exception e)
             {
+                Debug.LogError("Unable to save file.\n" + e);
                 stream.Close();
                 return false;
             }
@@ -44,6 +45,7 @@ namespace AstroTurffx.AstroUtils.SLSystem
                 }
                 catch (Exception e)
                 {
+                    Debug.LogError("Unable to load file.\n" + e);
                     stream.Close();
                     return false;
                 }
