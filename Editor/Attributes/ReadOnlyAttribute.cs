@@ -11,6 +11,7 @@ namespace AstroTurffx.AstroUtils.Editor
  
     }
  
+#if UNITY_EDITOR
     [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
     public class ReadOnlyDrawer : PropertyDrawer
     {
@@ -24,4 +25,5 @@ namespace AstroTurffx.AstroUtils.Editor
             GUI.enabled = true;
         }
     }
+#endif
 }

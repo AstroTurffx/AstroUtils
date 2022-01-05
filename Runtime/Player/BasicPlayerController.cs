@@ -2,11 +2,14 @@ using UnityEngine;
 using AstroTurffx.AstroUtils;
 using AstroTurffx.AstroUtils.Utils;
 
+using AstroTurffx.AstroUtils.Editor;
+
 namespace AstroTurffx.AstroUtils.Runtime
 {
     [RequireComponent(typeof(Rigidbody))]
     public class BasicPlayerController : Singleton<BasicPlayerController>
     {
+        [Fold("Default Settings", true)]
         [Header("Movement")]
 
         public float walkSpeed = 1;
@@ -34,7 +37,7 @@ namespace AstroTurffx.AstroUtils.Runtime
         // Other
         Rigidbody rb;
 
-        public void Start()
+        protected virtual void Start()
         {
             rb = GetComponent<Rigidbody>();
             Cursor.lockState = CursorLockMode.Locked;
@@ -46,7 +49,7 @@ namespace AstroTurffx.AstroUtils.Runtime
                 Debug.LogWarning("No camera holder set!");
         }
 
-        void Update()
+        protected virtual void Update()
         {
             if(cameraHolder != null && !paused) Look();
 
@@ -54,12 +57,12 @@ namespace AstroTurffx.AstroUtils.Runtime
             Jump();
         }
 
-        public void OnValidate()
+        protected virtual void OnValidate()
         {
             if (groundCheck != null) groundCheck.player = this;
         }
 
-        void Look()
+        protected virtual void Look()
         {
             transform.Rotate(Vector3.up * Input.GetAxisRaw("Mouse X") * sensitivity);
 
@@ -69,13 +72,13 @@ namespace AstroTurffx.AstroUtils.Runtime
             cameraHolder.localEulerAngles = Vector3.left * verticalLookRotation;
         }
 
-        void Move()
+        protected virtual void Move()
         {
             Vector3 moveDir = paused ? Vector3.zero : new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
             moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed) * 5f, ref smoothMoveVelocity, slipperyness);
         }
 
-        void Jump()
+        protected virtual void Jump()
         {
             if (Input.GetKeyDown(KeyCode.Space) && !jumped && !paused)
             {
@@ -84,7 +87,7 @@ namespace AstroTurffx.AstroUtils.Runtime
             }
         }
 
-        void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
         }

@@ -8,6 +8,7 @@ namespace AstroTurffx.AstroUtils.Editor
     internal class AstroUtilsMenuItems
     {
 
+#if UNITY_EDITOR
         [MenuItem("GameObject/Astro Utils/Basic Player Controller", false, 1)]
         static void CreateBasicPlayerController(MenuCommand menuCommand)
         {
@@ -62,5 +63,6 @@ namespace AstroTurffx.AstroUtils.Editor
             Undo.RegisterCreatedObjectUndo(bpc, "Create " + bpc.name);
             Selection.activeObject = bpc;
         }
+#endif
     }
 }

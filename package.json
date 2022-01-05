@@ -9,5 +9,6 @@
     "url": "https://github.com/astroturffx"
   },
   "changelogUrl": "https://github.com/AstroTurffx/AstroUtils/blob/main/CHANGELOG.md",
-  "documentationUrl": "https://github.com/AstroTurffx/AstroUtils/wiki"
+  "documentationUrl": "https://github.com/AstroTurffx/AstroUtils/wiki",
+  "type": "tool"
 }

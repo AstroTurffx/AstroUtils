@@ -9,6 +9,8 @@ using Object = UnityEngine.Object;
 
 namespace AstroTurffx.AstroUtils.Editor
 {
+#if UNITY_EDITOR
+	
 	[CustomEditor(typeof(Object), true, isFallback = true)]
 	[CanEditMultipleObjects]
 	public class CustomInspector : UnityEditor.Editor
@@ -322,4 +324,6 @@ namespace AstroTurffx.AstroUtils.Editor
 				needToRepaint = true;
 		}
 	}
+	
+#endif
 }

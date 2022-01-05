@@ -5,6 +5,7 @@ namespace AstroTurffx.AstroUtils.Utils
     public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         public static T Instance { get; private set; }
+        protected static bool ShouldDestroyOnLoad = false;
 
         public virtual void Awake()
         {
@@ -12,7 +13,7 @@ namespace AstroTurffx.AstroUtils.Utils
             if (Instance == null)
             {
                 Instance = t;
-                DontDestroyOnLoad(gameObject);
+                if(!ShouldDestroyOnLoad) DontDestroyOnLoad(gameObject);
             }
             else if (Instance != t)
             {

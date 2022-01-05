@@ -2,7 +2,8 @@
     "name": "AstroTurffx.AstroUtils.Editor",
     "rootNamespace": "",
     "references": [
-        "GUID:34ea5169b220c8e4eb8ba999427f3ea6"
+        "GUID:34ea5169b220c8e4eb8ba999427f3ea6",
+        "GUID:83f317c531f202d42942760c004be658"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

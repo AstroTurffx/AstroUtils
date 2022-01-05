@@ -1,7 +1,9 @@
 {
     "name": "AstroTurffx.AstroUtils",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "AstroTurffx.AstroUtils.Editor.Attributes"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
